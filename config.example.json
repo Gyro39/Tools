@@ -1,0 +1,35 @@
+{
+    "_comment": "Bilibili BW 抢票配置 — 复制为 config.json 后填写真实信息",
+    "project": {
+        "project_id": "100000",
+        "screen_id": 0,
+        "sku_id": 0,
+        "ticket_count": 2,
+        "_how_to_find": "打开 BW 购票页面，URL 中的数字就是 project_id；screen_id/sku_id 运行 python main.py info 自动获取"
+    },
+    "buyers": [
+        {
+            "name": "张三",
+            "id_type": 0,
+            "id_number": "110101199001011234",
+            "phone": "13800138000",
+            "_id_type_note": "0=身份证, 1=护照, 2=港澳通行证, 3=台胞证"
+        }
+    ],
+    "account": {
+        "cookie_string": "",
+        "_cookie_note": "浏览器登录 bilibili.com -> F12 -> Application -> Cookies -> .bilibili.com -> 把 SESSDATA, bili_jct, buvid3, DedeUserID 按 key=value; key2=value2 格式贴到这里"
+    },
+    "schedule": {
+        "sale_time": "2026-06-28 20:00:00",
+        "advance_ms": 300,
+        "_advance_note": "提前多少毫秒发起抢票请求 (建议 200-500ms；网络延迟大可增大)"
+    },
+    "advanced": {
+        "max_retries": 8,
+        "retry_interval_ms": 150,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "proxy": "",
+        "timeout_s": 5
+    }
+}
